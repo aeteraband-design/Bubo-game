@@ -1,0 +1,7 @@
+* { box-sizing: border-box; user-select: none; -webkit-user-select: none; touch-action: manipulation; font-family: 'Onest', sans-serif; font-weight: 500; }
+h1, h2, h3, h4, .font-black, strong, button, .btn-bubo, .btn-secondary { font-weight: 900 !important; }
+body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #0d021a; }
+canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.btn-bubo { background: linear-gradient(135deg, #FE7600 0%, #ff8c1a 100%); box-shadow: 0 4px 22px rgba(254, 118, 0, 0.5); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); }
+.btn-bubo:active { transform: scale(0.97); }
+.glass-panel { background: rgba(29, 9, 54, 0.95); backdrop-filter: blur(14px); border: 1px solid rgba(120, 44, 233, 0.55); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
