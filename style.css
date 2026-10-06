@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+}
+h1, h2, h3, h4, .font-black, strong, button, .btn-bubo, .btn-secondary, span.font-black, .fly-label-tag, .collection-theme-label {
+    font-weight: 900 !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0d021a;
+}
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+.btn-bubo {
+    background: linear-gradient(135deg, #FE7600 0%, #ff8c1a 100%);
+    box-shadow: 0 4px 22px rgba(254, 118, 0, 0.5);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 900;
+}
+.btn-bubo:active {
+    transform: scale(0.97);
+}
+
+.btn-secondary {
+    background: rgba(120, 44, 233, 0.3);
+    border: 1px solid rgba(120, 44, 233, 0.7);
+    transition: all 0.2s ease;
+    color: #e9d5ff;
+    font-weight: 900;
+}
+.btn-secondary:active {
+    transform: scale(0.97);
+}
+
+.glass-panel {
+    background: rgba(29, 9, 54, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(120, 44, 233, 0.55);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-menu {
+    background: rgba(29, 9, 54, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 44, 233, 0.45);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes hudPopSpring {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.24); filter: brightness(1.4); }
+    70% { transform: scale(0.96); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+.hud-pop-score { animation: hudPopSpring 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; border-color: #FE7600 !important; }
+.hud-pop-stamina { animation: hudPopSpring 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; border-color: #22c55e !important; }
+.hud-pop-heart { animation: hudPopSpring 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; border-color: #EF4444 !important; }
+
+@keyframes staminaDangerPulse {
+    0%, 100% { box-shadow: 0 0 6px rgba(239, 68, 68, 0.4); border-color: rgba(239, 68, 68, 0.7); background: rgba(45, 10, 20, 0.95); }
+    50% { box-shadow: 0 0 22px rgba(239, 68, 68, 1); border-color: #ff3b3b; transform: scale(1.05); }
+}
+.stamina-critical { animation: staminaDangerPulse 0.65s ease-in-out infinite; }
+
+@keyframes badgePulse {
+    0% { transform: scale(1); filter: brightness(1); }
+    40% { transform: scale(1.25); filter: brightness(1.5); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+.badge-animate { animation: badgePulse 0.45s ease-in-out; }
+
+@keyframes floatUpSmooth {
+    0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    100% { opacity: 0; transform: translate3d(0, -38px, 0) scale(0.96); }
+}
+.fly-label-tag { animation: floatUpSmooth 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards; pointer-events: none; position: absolute; z-index: 60; white-space: nowrap; }
+
+.flying-orb { position: absolute; z-index: 55; pointer-events: none; border-radius: 9999px; display: flex; align-items: center; justify-content: center; transition: all 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+
+@keyframes tapRippleAnim {
+    0% { transform: scale(0.4); opacity: 0.9; }
+    100% { transform: scale(2.2); opacity: 0; }
+}
+.tap-ripple { position: absolute; border-radius: 9999px; border: 2px solid #FE7600; pointer-events: none; animation: tapRippleAnim 0.5s ease-out forwards; z-index: 45; }
+
+.custom-scroll::-webkit-scrollbar { width: 4px; }
+.custom-scroll::-webkit-scrollbar-thumb { background: rgba(254, 118, 0, 0.5); border-radius: 4px; }
+.collection-badge-slot { padding-top: 6px; padding-bottom: 4px; height: 44px; }
